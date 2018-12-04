@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">angular.module('MyApp', ['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    .col-lg-1{
+    height: 520px;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: #000000;
+    }
+    .nav-pills>li>a {
+    border-radius: 0px;
+    }
+    .col-lg-3{
+    height: 520px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #2A2A2A;
+    }
+    .col-lg-2{
+
+    height: 520px;
+    padding: 0px;
+    background-color: #212121;
+    }
+    .col-lg-4{
+    height: 520px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #D5D2D1;
+    }
+    .col-lg-3 input[type=text] {
+    padding: 6px;
+    border: none;
+    }
+    .container {
+    border: 2px solid #dedede;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width:80%;
+    float:left;
+  
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: green;
+    float:right;
+   
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    max-height: 50px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+.nav.nav-pills.nav-stacked li a:hover{
+	background-color: grey;
+}
+.nav.nav-pills.nav-stacked li a{
+	color: white;
+}
+
+  </style>
+</head>
+<script type="text/javascript">
+  Function myfunction{
+  	var x=menu;
+  	var x1=menu1;
+  	document.getElementById("list").innerHTML(x);
+  	document.getElementById("list1").innerHTML(x1);
+  }
+  Function myfunc{
+  	document.getElementById("list");
+  }
+</script>
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction1() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+    }
+  }
+</script>
+<body ng-app="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4" >
+        <ul class="nav nav-pills nav-stacked" >
+          <li style="border-bottom: solid #424242;height: 42px;"><a data-toggle="tab" onclick="myfunction" href="#img"><img src="image/menu.jfif" style="margin-left:25%;height:20px;width: 20px;"></a></li>
+          <li><a data-toggle="tab" onclick="myfunc" href=""><img src="image/whatsapp.png"style="margin-left:25%;height:25px;width: 25px;"></a></li>
+          <li><a data-toggle="tab" href="#img"><img src="image/Gmail.png"  style="margin-left:25%; height:25px;width: 25px;"></a></li>
+          <li><a data-toggle="tab" href="#img"><img src="image/skype.jpg" style="margin-left:25%;height:25px;width: 25px;"></a></li>
+          <li><a data-toggle="tab" href="#img"><img src="image/slack.png" style="margin-left:25%;height:25px;width: 25px;"></a></li>
+          <li><a data-toggle="tab" href="#img"><img src="image/plus.jpg" style="margin-left:25%;height:25px;width: 25px;"></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-8" >
+        
+          <ul class="nav nav-pills nav-stacked">
+            <li style="border-bottom: solid #424242;"><a data-toggle="tab" id="list" href="#inbox"><b>Inbox</b><img src="image/contact.jpg"style="height:15px;width: 15px;float: right;"></a></li>
+            <li ><a data-toggle="tab" href="">All<label style="float:right;">89</label></a></li>
+            <li ><a data-toggle="tab" href="">Messages<label style="float:right;">11</label></a></li>
+            <li ><a data-toggle="tab" href="">Unread<label style="float:right;">4</label></a></li>
+            <li style="border-bottom: solid #424242;"><a data-toggle="tab" href="">Important<label style="float:right;">1</label></a></li>
+            <li ><a data-toggle="tab" href="">Teams<label style="float:right;">2</label></a></li>
+            <li ><a data-toggle="tab" href="">Groups<label style="float:right;">4</label></a></li>
+            <li ><a data-toggle="tab" href="">Channels<label style="float:right;">2</label></a></li>
+            <li ><a data-toggle="tab" href="">Location</a></li>
+            <li style="border-bottom: solid #424242;"><a data-toggle="tab" href="">Media<label style="float:right;">88</label></a></li>
+            <li ><a data-toggle="tab" href="">Help</a></li>
+            <li ><a data-toggle="tab" href="">Settings</a></li>
+          </ul>
+        
+      </div>
+      <div id="list1" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        
+          <ul class="nav nav-pills nav-stacked">
+            <li style="border-bottom:solid #424242; height:42px;padding: 5px;"><input type="text" placeholder="Search.."></li>
+            <li>
+              <a data-toggle="tab" href="">
+                <img src="image/girlbaby.jpg" class="img-circle"style="width:40px;height:40px;">   Michelle<img src="image/threedot.jpg" class="img-circle"style="width:20px;height:20px;float: right;">
+                <p style="position: absolute;right: 3% ;float:right;bottom:1%;">10 min</p>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="">
+                <img src="image/baby.jpg" class="img-circle"style="width:40px;height:40px;">   Matt<img src="image/threedot.jpg" class="img-circle"style="width:20px;height:20px;float: right;">
+                <p style="position: absolute;right: 3%;float:right;bottom:1%;">20 min</p>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="">
+                <img src="image/bossbaby.jfif" class="img-circle"style="width:40px;height:40px;">   Justin Engel<img src="image/threedot.jpg" class="img-circle"style="width:20px;height:20px;float: right;">
+                <p style="position: absolute;right: 3%;float:right;bottom:1%;">5 min</p>
+              </a>
+            </li>
+          </ul>
+        
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+        <p style="border-bottom: solid #424242;height: 42px;padding-right: 5px;padding-top: 10px;"> <label style="font-size: 65%;margin-left: 5%">Matt Thompson is typing...</label><img src="image/video.jfif" class="img-circle"style="width:30px;height:30px;float: right;padding:5px;"><img src="image/call.jpg" class="img-circle"style="width:30px;height:30px;float: right;padding: 5px;"><img src="image/star.jpg" class="img-circle"style="width:30px;height:30px;float: right;padding: 5px;"></p>
+        
+         
+        <div class="container">
+        	<img src="image/baby.jpg" alt="Avatar" class="img-circle" style="width:100%;">
+		 	 <p>Hello.<br> How are you today?</p>
+		 	 <span class="time-right">11:00</span>
+		</div>
+		
+		<div class="container darker">
+			<img src="image/bossbaby.jfif" alt="Avatar" class="img-circle" class="right" style="width:100%;">
+		  	<p>Hey! I'm fine.Thanks for asking!</p>
+		  	<span class="time-left">11:01</span>
+		</div>
+		
+
+		<div class="container">
+		  <img src="image/baby.jpg" alt="Avatar" style="width:100%;">
+		  <p>Sweet! So, what do you wanna do today?</p>
+		  <span class="time-right">11:02</span>
+		</div>
+
+		<div class="container darker">
+		  <img src="image/bossbaby.jfif" alt="Avatar" style="width:100%;">
+		  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+		  <span class="time-left">11:05</span>
+		</div>
+		<div class="cont" style="border-style: ridge;background: lightgrey;height: 30px;margin-top: 450px;padding-top: 2px;">
+			<img src="image/attach.png" style="height: 100%;width:8%;float:left;padding: 5px"><input type="text" name="" placeholder="Type your message..."><img src="image/Send.png" class="img-circle"style="float:right;height: 100%;width: 8%;padding: 5px;"><img src="image/smile.jfif" class="img-circle"style="float: right;height: 100%;width: 8%;padding: 5px;">
+		</div>
+
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12" style="background-color: white">
+        <p style="border-bottom: solid #424242; black;height: 42px;padding-right: 2px;padding-top: 5px;"><img src="image/bell.png" class="img-square"style="width:30px;height:30px;padding:5px;">
+          <class="dropdown" style="float:right;">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Johan Horn
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+        </class="dropdown">
+        </p>
+        <p style="padding-left: 5px;"><img src="image/Gmail.png" style="height: 10px;width: 10px;"><img src="image/threedot.jpg" style="height: 20px;width: 20px;float: right;"></p>
+        <div><p style="height: 22%;width: 75%;padding-left: 20%;"><img src="image/baby.jpg" class="img-thumbnail"></p></div>
+        <div style="line-height: 10px">
+          <p align="center">Matt Thompson</p>
+          <p align="center" style="font-size: 55% ">Cape Town RSA</p>
+        </div>
+        <hr style="size: 2%;">
+        <div style="padding: 5px; line-height: 8px">
+          <p><style="font-size: 35%;">Nickname:</style><label style="font-size: 65%; padding-left: 5%;float: right;">Triple T</label></p>
+          <p><style="font-size: 35%;">Tel:</style><label style="font-size: 65%; padding-left: 5%;float: right;">021 88 237 8890</label></p>
+          <p><style="font-size: 35%;">Date of Birth:</style><label style="font-size: 65%; padding-left: 5%;float: right;">june 20 1983</label></p>
+          <p><style="font-size: 35%;">Gender:</style><label style="font-size: 65%;padding-right: 5%;float: right;">Male</label></p>
+          <p><style="font-size: 35%;">Language:</style><label style="font-size: 65%; padding-left: 5%;float: right;">English</label></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

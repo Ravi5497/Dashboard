@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<script type="text/javascript">
+
+  
+
+</script> 
+<style>
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+
+.container{
+    max-width:100%;
+    background: green;
+   height: 300px;    
+}
+.box{
+	background: white;
+	width: 30%;
+	height: 125%;
+	padding: 10px;	
+    margin-left: 35%; 
+    margin-top: 15%;	
+}
+.profile{
+	text-align: center;
+	line-height: 12px;
+}
+.img{
+	margin-left:38%;
+	height: 75px;
+	width: 75px;
+}
+.container-fluid{
+	background: grey;
+	height: 15%;
+}
+</style>
+<body ng-app="">
+	
+	
+<div class="container">
+	
+	<div class="box">
+	<form action="inner.html" name="myform">
+				<img src="image/images.png" class="img"><br><br>
+				<div class="profile">
+						<label style="font-size: 20px"><b> Admin Login</b></label><br>
+						<label style="font-size: 10px">Sign in to your account</label><br><br>
+				</div>
+		<div style="text-align: center;line-height: 20px; ">
+			<input type="email" name="myInput" ng-model="myInput" placeholder="yourname@gmail.com" required><br><br>
+			<input type="password" name="myInput1" ng-model="myInput1" placeholder="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+			<label style="font-size: 12px"><input type="checkbox" id="checkbox">Remember me</label>
+			<button type="submit" class="btn btn-success" >Log In</button>
+		</div><br>
+
+`	</form>
+		<div class="container-fluid">
+		
+		
+			<label style="font-size: 12px;margin-left: 27%;margin-top: 5%" >Connect with</label>
+			<img src="image/twit.png" style="height: 25px;width: 25px;">
+			<img src="image/fb.png" style="height: 25px;width: 25px; ">
+		</div>
+	
+
+	</div>	
+
+
+
+
+</div>
+	
+</body>
